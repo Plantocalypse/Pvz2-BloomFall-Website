@@ -1,0 +1,210 @@
+/* Basic Reset & Gaming Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0a192f; /* Dark blue gaming background */
+    color: #ffffff;
+    overflow: hidden; /* Prevent unwanted scrolling */
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Main Navigation Container */
+header {
+    width: 100%;
+    padding: 25px 5%;
+    background: rgba(10, 25, 47, 0.93);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #172a45;
+    backdrop-filter: blur(5px);
+}
+
+/* Navigation Menu */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between navigation buttons */
+    flex-wrap: wrap;
+}
+
+/* Left Logo */
+.brand-logo {
+    position: absolute;
+    left: 5%;
+    font-size: 24px;
+    font-weight: 900;
+    color: #00ffaa;
+    text-shadow: 0 0 10px rgba(0,255,170,0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Button Style */
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Download Button Highlight */
+.download-btn {
+    color: #fffb00;
+    text-shadow: 0 0 5px rgba(255, 251, 0, 0.5);
+}
+
+.download-btn:hover {
+    color: #ffff55 !important;
+    text-shadow: 0 0 10px rgba(255, 251, 0, 0.9) !important;
+}
+
+/* Music Button Style */
+.music-btn {
+    color: #cc00ff;
+    text-shadow: 0 0 5px rgba(204, 0, 255, 0.5);
+}
+
+.music-btn:hover {
+    color: #ff00ff !important;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.9) !important;
+}
+
+/* YouTube Button Style */
+.youtube-btn {
+    color: #ff3333;
+    text-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+}
+
+.youtube-btn:hover {
+    color: #ff6666 !important;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.9) !important;
+}
+
+/* Main Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    background: linear-gradient(180deg, rgba(10,25,47,0.2) 0%, #0a192f 95%);
+    padding-bottom: 50px; /* Leave space for the footer */
+}
+
+/* Main Logo Container */
+.main-logo-box {
+    max-width: 450px;
+    width: 90%;
+    margin-bottom: 10px;
+    animation: pulseGlow 3s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.main-logo-box:hover {
+    transform: scale(1.03);
+}
+
+.main-logo-box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { filter: drop-shadow(0 0 15px rgba(0, 255, 170, 0.3)); }
+    50% { filter: drop-shadow(0 0 30px rgba(0, 255, 170, 0.6)); }
+}
+
+/* Main Download Button */
+.cta-container {
+    margin-top: 20px;
+    z-index: 10;
+}
+
+.main-download-btn {
+    display: inline-block;
+    padding: 14px 38px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0a192f;
+    background-color: #00ffaa;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.main-download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 170, 0.8);
+    background-color: #00e699;
+}
+
+/* Falling Rain Particle Effect */
+.rain-particle {
+    position: absolute;
+    background-color: #00ffaa; 
+    border-radius: 0; 
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 2;
+    animation: rainDown linear infinite;
+}
+
+@keyframes rainDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    10% { 
+        opacity: 0.4; 
+    }
+    90% { 
+        opacity: 0.4; 
+    }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+/* Footer */
+.game-footer {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.5px;
+    padding: 0 20px;
+    line-height: 1.4;
+}
